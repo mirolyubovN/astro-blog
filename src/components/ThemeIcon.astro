@@ -68,7 +68,9 @@
 	document.addEventListener('astro:after-swap', applyTheme);
 	applyTheme();
 
-	document
-		.getElementById('themeToggle')
-		?.addEventListener('click', handleToggleClick);
+	document.addEventListener('astro:page-load', () => {
+		document
+			.getElementById('themeToggle')
+			?.addEventListener('click', handleToggleClick);
+	});
 </script>
